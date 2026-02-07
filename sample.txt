@@ -1,0 +1,33 @@
+--------------------------JD--------------------------------------------------
+We are looking for a Frontend Engineer with strong experience in React and
+TypeScript.
+
+Requirements:
+- Strong knowledge of React and TypeScript
+- Experience working with REST APIs
+- Familiarity with testing frameworks like Jest or React Testing Library
+- Understanding of performance optimization techniques
+- Knowledge of modern frontend tooling
+
+
+
+--------------------------------RESUME------------------------------------------
+Frontend Developer with 1.5 years of experience building responsive web
+applications using React.js, JavaScript, HTML, and CSS.
+
+Skills:
+- React.js (Hooks, Context API)
+- JavaScript (ES6+)
+- HTML5, CSS3, Tailwind CSS
+- Git & GitHub
+- Basic Node.js and Express
+
+Experience:
+- Developed reusable UI components using React.
+- Integrated frontend with REST APIs.
+- Improved UI performance by optimizing component re-renders.
+- Worked closely with designers to implement pixel-perfect designs.
+
+Projects:
+- Job Tracker App using React and local storage.
+- Resume Analyzer UI using React and Tailwind CSS.
