@@ -1,16 +1,36 @@
-# React + Vite
+# Resume AI Dashboard 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered Resume Analyzer with dashboard analytics, built using MERN stack and OpenAI.
 
-Currently, two official plugins are available:
+## ✨ Features
+- 🔐 JWT Authentication
+- 📊 Dashboard Analytics
+- 🧠 AI Resume & JD Matching
+- 📝 Resume Score History
+- 📈 Charts (Recharts)
+- 🗂 MongoDB Persistence
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- Frontend: React, Tailwind CSS, Recharts
+- Backend: Node.js, Express, MongoDB
+- AI: OpenAI GPT
+- Auth: JWT
 
-## React Compiler
+## 📦 Setup Instructions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend
+```bash
+cd backend
+npm install
 
-## Expanding the ESLint configuration
+MONGO_URI=your_mongo_uri
+OPENAI_API_KEY=your_openai_key
+JWT_SECRET=your_secret
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+Frontend
+```cd frontend
+npm install
+npm run dev
+```
+
