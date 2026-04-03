@@ -9,6 +9,8 @@ import ResumeAi from "./pages/ResumeAi";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Billing from "./pages/Billing";
+import Profile from './pages/ProfilePage'
+import Signup from "./pages/Signup";
 
 function App() {
   const { user, loading } = useAuth();
@@ -19,6 +21,7 @@ function App() {
     <Routes>
       {/* Public */}
       <Route path="/login" element={<Login />} />
+      <Route path="/Signup" element={<Signup/>}/>
 
       {/* Protected Dashboard */}
       <Route
@@ -33,6 +36,7 @@ function App() {
         <Route path="/applications" element={<Applications />} />
         <Route path="/resume" element={<ResumeAi />} />
         <Route path="/billing" element={<Billing />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
 
       {/* Default */}

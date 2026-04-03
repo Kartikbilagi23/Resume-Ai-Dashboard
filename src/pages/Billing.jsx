@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../App.css"
 
 const Billing = () => {
   const [subscription, setSubscription] = useState(null);
@@ -105,7 +106,7 @@ const Billing = () => {
 
   // ---------------- UI ----------------
   return (
-    <div className="p-6 max-w-5xl mx-auto space-y-8">
+    <div className="p-6 max-w-5xl mx-auto flex gap-[50px]">
       {/* Header */}
       <div>
         <h1 className="text-3xl font-semibold">Billing</h1>
@@ -133,7 +134,7 @@ const Billing = () => {
       )}
 
       {/* Plans */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="flex gap-[60px]">
         {/* FREE */}
         <PlanCard
           title="Free"
@@ -148,7 +149,6 @@ const Billing = () => {
           price="₹499 / month"
           features={[
             "Unlimited AI",
-            "Resume Analyzer",
             "Priority support",
           ]}
           onClick={() => subscribe("Pro")}
@@ -161,7 +161,6 @@ const Billing = () => {
           price="₹999 / month"
           features={[
             "Everything in Pro",
-            "Advanced AI tools",
             "1-on-1 Support",
           ]}
           onClick={() => subscribe("Premium")}
@@ -183,23 +182,23 @@ const PlanCard = ({
   loading,
   disabled,
 }) => (
-  <div className="bg-white rounded-xl p-6 shadow space-y-4">
+  <div className="bg-white rounded-xl p-6 shadow space-y-4 pr-[10px] pl-[10px] ">
     <h3 className="text-xl font-semibold">{title}</h3>
     <p className="text-2xl font-bold">{price}</p>
 
     <ul className="text-gray-600 space-y-1">
       {features.map((f, i) => (
-        <li key={i}>• {f}</li>
+        <li key={i}> {f}</li>
       ))}
     </ul>
 
     <button
       disabled={disabled || loading}
       onClick={onClick}
-      className={`w-full py-2 rounded-xl text-white ${
+      className={`w-full py-2 rounded-xl text-white mb-[12px] ${
         disabled
-          ? "bg-gray-400 cursor-not-allowed"
-          : "bg-blue-600 hover:bg-blue-700"
+          ? "disabledcolor"
+          : "notdisabledcolor"
       }`}
     >
       {loading ? "Processing..." : disabled ? "Current Plan" : "Upgrade"}

@@ -8,6 +8,7 @@ import {
   FaChevronLeft
 } from "react-icons/fa";
 import React from "react"
+import "../App.css"
 
 const navItems = [
   { name: "Dashboard", icon: FaHome, path: "/dashboard" },
@@ -20,7 +21,7 @@ const navItems = [
 const Sidebar = ({ collapsed, setCollapsed }) => {
   return (
     <aside
-      className={`h-screen bg-white border-r transition-all duration-300
+      className={`h-screen bg-[#151821] aside border-black transition-all duration-300
       ${collapsed ? "w-20" : "w-64"}`}
     >
       {/* Brand */}
@@ -30,13 +31,13 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
         </span>
         <button onClick={() => setCollapsed(!collapsed)}>
           <FaChevronLeft
-            className={`transition-transform ${collapsed && "rotate-180"}`}
+            className={` bg-[#151821] transition-transform ${collapsed && "rotate-180"}`}
           />
         </button>
       </div>
 
       {/* Navigation */}
-      <nav className="mt-4 space-y-1 h-[60vh] flex flex-col justify-between">
+      <nav className="mt-4 space-y-1 h-[67vh] flex flex-col justify-between">
         {navItems.map((item) => (
           <NavLink
             key={item.name}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaMagic } from "react-icons/fa";
+import '../App.css';
 
 
 const ResumeAi = () => {
@@ -85,14 +86,14 @@ const fetchHistory = async () => {
         <textarea
           rows={8}
           placeholder="Paste resume..."
-          className="border p-4 rounded-xl"
+          className="border p-4 rounded-xl w-[873px]"
           value={resume}
           onChange={(e) => setresume(e.target.value)}
         />
         <textarea
           rows={8}
           placeholder="Paste job description..."
-          className="border p-4 rounded-xl"
+          className="border p-4 rounded-xl w-[873px]"
           value={jd}
           onChange={(e) => setjd(e.target.value)}
         />
@@ -102,7 +103,7 @@ const fetchHistory = async () => {
       <button
         onClick={analyseresume}
         disabled={!resume || !jd || loading}
-        className="bg-blue-600 text-white px-6 py-3 rounded-xl flex gap-2"
+        className="white px-6 py-3 rounded-xl flex gap-2"
       >
         <FaMagic />
         {loading ? "Analyzing..." : "Analyze Resume"}

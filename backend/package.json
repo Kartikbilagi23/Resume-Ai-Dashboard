@@ -11,11 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cloudinary": "^2.9.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.1.1",
-    "openai": "^6.15.0"
+    "multer": "^2.1.1",
+    "openai": "^6.15.0",
+    "pdfkit": "^0.18.0",
+    "react-easy-crop": "^5.5.7"
   }
 }

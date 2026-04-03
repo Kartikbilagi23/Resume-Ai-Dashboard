@@ -2,6 +2,7 @@ import express from 'express'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import User from '../models/User.js'
+import auth from '../middleware/authMiddleware.js'
 
 const router=express.Router()
 
@@ -21,7 +22,15 @@ router.post("/register",async(req,res)=>{
             email,
             password:hashed,
         })
-        res.status(201).json({message:"User successfully registered"});
+        const token=jwt.sign(
+            {userId:user._id},
+            process.env.JWT_SECRET_KEY,
+            {expiresIn:"7d"}
+        )
+        res.json({token});
+        res.status(201).json({
+        token,
+        message:"User successfully registered"});
     } catch {
         res.status(500).json({message:"Registration Failed"});
     }
@@ -46,8 +55,18 @@ router.post('/login',async(req,res)=>{
             token,
             user:{id:user._id,name:user.name,email:user.email},
         })
-    } catch {
+    } catch(err) {
+        console.log(err)
         res.status(500).json({message:"Login failed"})
     }
 })
+router.get("/me",auth,async (req, res) => {
+  try {
+    const user = await User.findById(req.userId).select("-password");
+
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ message: "Failed to fetch user" });
+  }
+});
 export default router

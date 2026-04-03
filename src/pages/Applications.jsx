@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import '../App.css'
 
 const statusColor = {
   Applied: "bg-blue-100 text-blue-700",
@@ -139,7 +140,7 @@ await fetch(`http://localhost:5000/api/applications/${id}`, {
 
         <button
           type="submit"
-          className="bg-blue-600 text-white rounded-lg"
+          className="white rounded-lg"
         >
           {editId ? "Update" : "Add"}
         </button>
@@ -161,13 +162,13 @@ await fetch(`http://localhost:5000/api/applications/${id}`, {
               <div className="flex gap-3">
                 <button
                   onClick={() => editapp(app)}
-                  className="text-blue-600"
+                  className="white"
                 >
                   <FaEdit />
                 </button>
                 <button
                   onClick={() => deleteapp(app._id)}
-                  className="text-red-600"
+                  className="white"
                 >
                   <FaTrash />
                 </button>

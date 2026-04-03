@@ -11,6 +11,7 @@ router.post("/", auth, async (req, res) => {
       ...req.body,
       userId: req.userId,
     });
+    console.log("Saving user data for",req.userId)
     res.json(skill);
   } catch (err) {
     res.status(500).json({ message: "Skill creation failed" });

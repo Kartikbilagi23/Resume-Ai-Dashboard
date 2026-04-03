@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/Authcontext.jsx";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import "../App.css"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,13 +27,13 @@ const Login = () => {
       login(data.token);
       navigate("/dashboard");
     } else {
-      alert(data.error || "Login failed");
+      console.log(data.error || "Login failed");
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#747bff26] flex items-center justify-center px-4">
-      <div className=" max-w-md bg-white rounded-xl shadow-sm border p-8 pr-[5px] w-[50%]">
+    <div className="min-h-screen bg-[#202430] flex items-center justify-center px-4">
+      <div className=" max-w-md bg-white  shadow border rounded-[20px] p-[13px] w-[50%]">
         
         {/* Heading */}
         <h1 className="text-3xl font-serif font-semibold mb-2 text-center">
@@ -40,7 +41,9 @@ const Login = () => {
         </h1>
         <p className="text-sm text-gray-600 mb-6 flex flex-col text-center">
           Need a SkillTrack account?{" "}
-          <span className="text-blue-600 cursor-pointer hover:underline">
+          <span 
+          onClick={()=>navigate("/Signup")}
+          className="text-blue-600 cursor-pointer hover:underline">
             Create an account
           </span>
         </p>
@@ -58,7 +61,7 @@ const Login = () => {
               value={email}
               placeholder="Enter your email.."
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-[#4c55fa3d] border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 h-[5vh]"
+              className=" text-[#f5deb3] w-full bg-[#353a4a] border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 h-[5vh]"
             />
           </div>
 
@@ -80,7 +83,7 @@ const Login = () => {
               value={password}
               placeholder="Enter your password.."
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-[#4c55fa3d] border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 h-[5vh]"
+              className=" text-[#f5deb3] w-full bg-[#353a4a] border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 h-[5vh]"
             />
           </div>
 
@@ -93,7 +96,7 @@ const Login = () => {
           {/* Button */}
           <button
             type="submit"
-            className="w-full bg-teal-700 text-white py-3 rounded-full hover:bg-teal-800 transition font-medium"
+            className="w-full login bg-teal-700 text-white py-3 rounded-full hover:bg-teal-800 transition font-medium"
           >
             Log in
           </button>

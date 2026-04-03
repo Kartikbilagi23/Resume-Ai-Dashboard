@@ -2,17 +2,117 @@ body{
   margin: 0;
   padding: 0;
 }
+.login{
+  color: white;
+}
+.custom-blk{
+  background-color: #202430;
+}
+.roboto-mono-font {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.profile{
+  background: wheat;
+}
+.profile-pic{
+  background-color: wheat;
+}m
+.profile-name{
+  font-size: 36px;
+}
+.bg-blur{
+    
+  background: rgba(0, 0, 0, 0.3); /* optional dark effect */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* safari */
+  z-index: 1000;
+}
+.white{
+  color: white;
+}
+.profile-mail{
+  color: gray;
+}
+.editinput{
+  width: auto;
+  padding: 10px;
+}
+.editbtn{
+  position: relative;
+  width: 54px;
+  left: 25vh;
+}
+.editprofile{
+  bottom: 50vh;
+  left: 60vh;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #93939c5c;
+  border-radius: 22px;
+}
+.stats{
+  position: relative;
+  bottom: 0vh;
+  background-color: #1317218f;
+  border-radius: 23px;
+  margin-left: 8px;
+}
+.profile-char{
+  font-size: 50px;
+}
+.profile-role{
+  color: #8499ac;
+}
+.disabledcolor{
+  color: #7979e6;
+}
+.notdisabledcolor{
+  color: #f5deb3;
+}
+.reportbtn{
+  color: #f5deb3;
+  border: 2px solid #ffffffb3 ;
+}
+.shadow{
+  box-shadow: 0 4px 12px rgb(0 0 0 / 45%);
+  color: #ffffffb3;
+}
+.color{
+  color: #f5deb3;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+.black{
+  color: black;
+}
+.aside{
+  color: #f5deb3;
+  font-size: 20px;
+}
+.dropbtn{
+  border-radius: 0;
+  color: white;
+}
+/* .statsdisplay{
+  background: #4f5a7a;
+} */
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.wheat{
+  color: wheat;
 }
 
 @keyframes logo-spin {

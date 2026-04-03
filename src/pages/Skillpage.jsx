@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaEdit, FaPlus, FaTrash } from "react-icons/fa";
+import '../App.css'
 
 const Skillpage = () => {
   const [skills, setskills] = useState([]);
@@ -103,7 +104,7 @@ const Skillpage = () => {
           <option>Advanced</option>
         </select>
 
-        <button className="bg-blue-600 text-white rounded-lg flex items-center justify-center gap-2">
+        <button className="bg-blue-600 text-white rounded-lg flex items-center justify-center gap-2 white">
           <FaPlus />
           {editId ? "Update Skill" : "Add Skill"}
         </button>
@@ -118,11 +119,11 @@ const Skillpage = () => {
               <div className="flex m-[12px] gap-[20px]">
                 <FaEdit
                   onClick={() => editskills(skill)}
-                  className="text-blue-600 cursor-pointer gap-3"
+                  className="!text-blue-600 cursor-pointer gap-3"
                 />
                 <FaTrash
                   onClick={() => deleteskills(skill._id)}
-                  className="text-red-600 cursor-pointer"
+                  className="!text-red-600 cursor-pointer"
                 />
               </div>
             </div>
